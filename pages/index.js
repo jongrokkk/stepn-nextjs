@@ -2,20 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Button, Navbar, Container, Nav } from 'react-bootstrap'
+import Header from './head/header.js'
 
 export default function Home() {
   return (
-    <div>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">홈</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">스테픈</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-    </div>
+    <Header></Header>
   )
 }
