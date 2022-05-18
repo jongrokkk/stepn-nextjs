@@ -15,6 +15,9 @@ function minting(props) {
     const gst_sol = (data['green-satoshi-token'].usd / data.solana.usd).toFixed(3);
     // console.log(data.stepn.usd);
     // console.log(data['green-satoshi-token'].usd);
+
+    const gst_amount = 120;
+    const gmt_amount = 80;
     return (
         <>
             <Header></Header>
@@ -27,6 +30,7 @@ function minting(props) {
                             <th>Sol</th>
                             <th>Gmt (Sol)</th>
                             <th>Gst (Sol)</th>
+                            <th>1달러 환율</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,6 +39,7 @@ function minting(props) {
                             <td>${data.solana.usd}</td>
                             <td>${data.stepn.usd} ({(data.stepn.usd / data.solana.usd).toFixed(3)}Sol)</td>
                             <td>${data['green-satoshi-token'].usd} ({(data['green-satoshi-token'].usd / data.solana.usd).toFixed(3)}Sol)</td>
+                            <td>1,200원</td>
                         </tr>
                     </tbody>
                 </Table>
@@ -47,16 +52,41 @@ function minting(props) {
                 <Table striped bordered hover size='md'>
                     <thead>
                         <tr>
-                            <th>렙업비용(20GST+10GMT)</th>
-                            <th>GST + GMT (120/80)</th>
+                            <th>렙업비(20GST+10GMT)</th>
+                            <th>민팅비(120GST + 80GMT)</th>
                             <th>ToTal</th>
+                            <th>바닥가</th>
+                            <th>손익(\)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>{(gst_sol * 20 + gmt_sol * 10).toFixed(2)}Sol</td>
-                            <td>{(gst_sol * 120 + gmt_sol * 80).toFixed(2)}Sol</td>
-                            <td>{((gst_sol * 20 + gmt_sol * 10) + (gst_sol * 120 + gmt_sol * 80)).toFixed(2)}Sol</td>
+                            <td>{(gst_sol * gst_amount + gmt_sol * gmt_amount).toFixed(2)}Sol</td>
+                            <td>{((gst_sol * 20 + gmt_sol * 10) + (gst_sol * gst_amount + gmt_sol * gmt_amount)).toFixed(2)}Sol</td>
+                            <td>12.4Sol</td>
+                            <td>{(12.4 - ((gst_sol * 20 + gmt_sol * 10) + (gst_sol * gst_amount + gmt_sol * gmt_amount))).toFixed(2)}Sol (\{((12.4 - ((gst_sol * 20 + gmt_sol * 10) + (gst_sol * gst_amount + gmt_sol * gmt_amount))) * sol_usd * 1200).toFixed(1)})</td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <p>3민트</p>
+                <Table striped bordered hover size='md'>
+                    <thead>
+                        <tr>
+                            <th>렙업비(0)</th>
+                            <th>민팅비(180GST + 120GMT)</th>
+                            <th>ToTal</th>
+                            <th>바닥가</th>
+                            <th>손익(\)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0Sol</td>
+                            <td>{(gst_sol * 180 + gmt_sol * 120).toFixed(2)}Sol</td>
+                            <td>{(gst_sol * 180 + gmt_sol * 120).toFixed(2)}Sol</td>
+                            <td>15.4Sol</td>
+                            <td>{(12.4 - ((gst_sol * 20 + gmt_sol * 10) + (gst_sol * 120 + gmt_sol * 80))).toFixed(2)}Sol (\{((12.4 - ((gst_sol * 20 + gmt_sol * 10) + (gst_sol * 120 + gmt_sol * 80))) * sol_usd * 1200).toFixed(1)})</td>
                         </tr>
                     </tbody>
                 </Table>
