@@ -196,7 +196,7 @@ export async function getServerSideProps() {
 
     return {
         props: {
-            pay_data: response.data,
+            pay_data: response.data
         }
     }
 }
