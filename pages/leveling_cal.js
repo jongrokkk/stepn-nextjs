@@ -73,7 +73,7 @@ const custom_time_cal = (a, b) => {
     return portions.join(' ');
 }
 
-function leveling_cal(props) {
+function Leveling_cal(props) {
 
     const { pay_data } = props;
     const gmt_sol = (pay_data.stepn.usd / pay_data.solana.usd).toFixed(3);
@@ -201,4 +201,4 @@ export async function getServerSideProps() {
     }
 }
 
-export default leveling_cal;
+export default Leveling_cal;
