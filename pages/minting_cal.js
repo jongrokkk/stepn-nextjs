@@ -43,11 +43,11 @@ function minting_cal(props) {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="col-md-2">${data.bitcoin.usd.toLocaleString(3)}</td>
-                                    <td class="col-md-2">${data.solana.usd}</td>
-                                    <td class="col-md-2">${data.stepn.usd} ({(data.stepn.usd / data.solana.usd).toFixed(3)}Sol)</td>
-                                    <td class="col-md-2">${data['green-satoshi-token'].usd} ({(data['green-satoshi-token'].usd / data.solana.usd).toFixed(3)}Sol)</td>
-                                    <td class="col-md-2">\{krw_usd.toLocaleString(3)}</td>
+                                    <td className="col-md-2">${data.bitcoin.usd.toLocaleString(3)}</td>
+                                    <td className="col-md-2">${data.solana.usd}</td>
+                                    <td className="col-md-2">${data.stepn.usd} ({(data.stepn.usd / data.solana.usd).toFixed(3)}Sol)</td>
+                                    <td className="col-md-2">${data['green-satoshi-token'].usd} ({(data['green-satoshi-token'].usd / data.solana.usd).toFixed(3)}Sol)</td>
+                                    <td className="col-md-2">\{krw_usd.toLocaleString(3)}</td>
                                 </tr>
                             </tbody>
                         </Table>
@@ -84,11 +84,11 @@ function minting_cal(props) {
                         <Table bordered hover size='md'>
                             <thead>
                                 <tr>
-                                    <th class="col-md-2">렙업비(0)</th>
-                                    <th class="col-md-2">민팅비({gst_amount * 1.5}GST + {gmt_amount * 1.5}GMT)</th>
-                                    <th class="col-md-2">ToTal</th>
-                                    <th class="col-md-2">바닥가</th>
-                                    <th class="col-md-2">손익(\)</th>
+                                    <th className="col-md-2">렙업비(0)</th>
+                                    <th className="col-md-2">민팅비({gst_amount * 1.5}GST + {gmt_amount * 1.5}GMT)</th>
+                                    <th className="col-md-2">ToTal</th>
+                                    <th className="col-md-2">바닥가</th>
+                                    <th className="col-md-2">손익(\)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -112,9 +112,9 @@ function minting_cal(props) {
                         <Table bordered hover size='md'>
                             <thead>
                                 <tr>
-                                    <th class="col-md-4">GST 달러</th>
-                                    <th class="col-md-4">민팅비용(GST)</th>
-                                    <th class="col-md-4">민팅비용(GMT)</th>
+                                    <th className="col-md-4">GST 달러</th>
+                                    <th className="col-md-4">민팅비용(GST)</th>
+                                    <th className="col-md-4">민팅비용(GMT)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -123,7 +123,7 @@ function minting_cal(props) {
                                     <td>200GST</td>
                                     <td>0GMT</td>
                                 </tr>
-                                <tr class="table-warning">
+                                <tr className="table-warning">
                                     <td>$2 ~ $3</td>
                                     <td>160GST</td>
                                     <td>40GMT</td>

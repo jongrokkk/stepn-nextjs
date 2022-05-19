@@ -11,11 +11,11 @@ function level_cost() {
 
         td_array.push(
             <tr>
-                <td class="col-md-2">{i}</td>
-                <td class="col-md-2">{i}</td>
-                <td class="col-md-2">{i + j}</td>
-                <td class="col-md-2">{i}</td>
-                <td class="col-md-2">{i}</td>
+                <td className="col-md-2">{i}</td>
+                <td className="col-md-2">{i}</td>
+                <td className="col-md-2">{i + j}</td>
+                <td className="col-md-2">{i}</td>
+                <td className="col-md-2">{i}</td>
             </tr>
         )
         j = i + j;
@@ -135,10 +135,10 @@ function leveling_cal(props) {
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="col-md-2"><input type="text" placeholder="시작레벨" name="start_level" onChange={handleChange} value={start_level} /></td>
-                                <td class="col-md-2"><input type="text" placeholder="도달레벨" name="end_level" onChange={handleChange} value={end_level} /></td>
-                                <td class="col-md-2">{custom_time_cal(data.start_level, data.end_level)}시간</td>
-                                <td class="col-md-2">{custom_cost_cal(data.start_level, data.end_level)[0]}GST / {custom_cost_cal(data.start_level, data.end_level)[1]}GMT ({custom_cost_cal(data.start_level, data.end_level)[2].toFixed(2)})SOL</td>
+                                <td className="col-md-2"><input type="text" placeholder="시작레벨" name="start_level" onChange={handleChange} value={start_level} /></td>
+                                <td className="col-md-2"><input type="text" placeholder="도달레벨" name="end_level" onChange={handleChange} value={end_level} /></td>
+                                <td className="col-md-2">{custom_time_cal(data.start_level, data.end_level)}시간</td>
+                                <td className="col-md-2">{custom_cost_cal(data.start_level, data.end_level)[0]}GST / {custom_cost_cal(data.start_level, data.end_level)[1]}GMT ({custom_cost_cal(data.start_level, data.end_level)[2].toFixed(2)})SOL</td>
                             </tr>
                         </tbody>
                     </Table>
