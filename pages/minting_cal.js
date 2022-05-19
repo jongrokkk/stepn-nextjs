@@ -18,8 +18,9 @@ function minting_cal(props) {
 
     const gst_amount = 160;
     const gmt_amount = 40;
-    const floor_price = 12.4;
-
+    const floor_price_two = 12.4;
+    const floor_price_zero = 15.4;
+    const fees = 0.94;
     const krw_usd = data_usd[0].basePrice;
 
     return (
@@ -74,8 +75,8 @@ function minting_cal(props) {
                                     <td>{(gst_sol * 20 + gmt_sol * 10).toFixed(2)}Sol</td>
                                     <td>{(gst_sol * gst_amount + gmt_sol * gmt_amount).toFixed(2)}Sol</td>
                                     <td>{((gst_sol * 20 + gmt_sol * 10) + (gst_sol * gst_amount + gmt_sol * gmt_amount)).toFixed(2)}Sol</td>
-                                    <td>{floor_price}Sol</td>
-                                    <td>{(floor_price - ((gst_sol * 20 + gmt_sol * 10) + (gst_sol * gst_amount + gmt_sol * gmt_amount))).toFixed(2)}Sol (\{((floor_price - ((gst_sol * 20 + gmt_sol * 10) + (gst_sol * gst_amount + gmt_sol * gmt_amount))) * sol_usd * 1200).toLocaleString(undefined, { maximumFractionDigits: 0 })})</td>
+                                    <td>{floor_price_two}Sol</td>
+                                    <td>{((floor_price_two * fees) - ((gst_sol * 20 + gmt_sol * 10) + (gst_sol * gst_amount + gmt_sol * gmt_amount))).toFixed(2)}Sol (\{(((floor_price_two * fees) - ((gst_sol * 20 + gmt_sol * 10) + (gst_sol * gst_amount + gmt_sol * gmt_amount))) * sol_usd * 1200).toLocaleString(undefined, { maximumFractionDigits: 0 })})</td>
                                 </tr>
                             </tbody>
                         </Table>
@@ -96,7 +97,7 @@ function minting_cal(props) {
                                     <td>{(gst_sol * gst_amount * 1.5 + gmt_sol * gmt_amount * 1.5).toFixed(2)}Sol</td>
                                     <td>{(gst_sol * gst_amount * 1.5 + gmt_sol * gmt_amount * 1.5).toFixed(2)}Sol</td>
                                     <td>15.4Sol</td>
-                                    <td>{(12.4 - ((gst_sol * 20 + gmt_sol * 10) + (gst_sol * 120 + gmt_sol * 80))).toFixed(2)}Sol (\{((12.4 - ((gst_sol * 20 + gmt_sol * 10) + (gst_sol * 120 + gmt_sol * 80))) * sol_usd * 1200).toLocaleString(undefined, { maximumFractionDigits: 0 })})</td>
+                                    <td>{((floor_price_zero * fees) - ((gst_sol * 20 + gmt_sol * 10) + (gst_sol * gst_amount * 1.5 + gmt_sol * gmt_amount * 1.5))).toFixed(2)}Sol (\{(((floor_price_zero * fees) - ((gst_sol * 20 + gmt_sol * 10) + (gst_sol * gst_amount * 1.5 + gmt_sol * gmt_amount * 1.5))) * sol_usd * 1200).toLocaleString(undefined, { maximumFractionDigits: 0 })})</td>
                                 </tr>
                             </tbody>
                         </Table>
