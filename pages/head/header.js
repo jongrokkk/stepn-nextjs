@@ -7,7 +7,7 @@ function header() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Brand href="#home">Stepn</Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link href="./minting_cal">민팅비계산</Nav.Link>
+                    <Nav.Link href="./Minting_cal">민팅비계산</Nav.Link>
                     <Nav.Link href="./shoebox_pro">슈박스확률</Nav.Link>
                     <Nav.Link href="./Leveling_cal">레벨업비용</Nav.Link>
                 </Nav>
