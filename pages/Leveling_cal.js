@@ -40,7 +40,7 @@ function level_cost() {
                 <td className="col-md-2">{i}</td>
                 <td className="col-md-2">{i + j}</td>
                 <td className="col-md-2">{custom_cost_cal(i)[0]}GST</td>
-                <td className="col-md-2">GST</td>
+                <td className="col-md-2">{custom_cost_cal(i)[0]}GST + {custom_cost_cal(i)[1]}GMT</td>
             </tr>
         )
         j = i + j;
